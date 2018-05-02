@@ -6,5 +6,10 @@ test:
 
 production:
   adapter: redis
-  url: redis://localhost:6379/1
-  channel_prefix: ActionCableUploader_production
+  url: redis://redistogo:c2f4e54883dd21104af2603e22436b83@angelfish.redistogo.com:9284
+  host: angelfish.redistogo.com
+  port: 9284
+  password: c2f4e54883dd21104af2603e22436b83
+  inline: true
+  timeout: 1
+  channel_prefix: chat_room_production
