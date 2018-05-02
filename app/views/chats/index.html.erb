@@ -1,0 +1,21 @@
+<h1>Chat Room</h1>
+
+<div id="messages">
+  <%= render @messages %>
+</div>
+
+<h2>New message</h2>
+
+<%= form_with url: '#', html: {id: 'new-message'} do |f| %>
+  <%= f.label :body %>
+  <%= f.text_area :body, id: 'message-body' %>
+
+  <div class="form-group">
+    <%= f.file_field :attachment, id: 'message-attachment' %>
+    <br>
+    <small>Please upload .png, .jpg and .gif format images only </small>
+  </div>
+
+  <br>
+  <%= f.submit %>
+<% end %>
